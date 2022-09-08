@@ -1,10 +1,10 @@
 .DS_Store
 node_modules
 /dist
-src/views/AboutView.vue
 
 
 # local env files
+.env.js
 .env.local
 .env.*.local
 
