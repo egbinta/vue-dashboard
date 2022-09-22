@@ -90,7 +90,6 @@ export default {
       this.reminder = false;
     },
     updateItem(item) {
-      console.log(item);
       this.todoForm = false;
       this.updateForm = true;
       this.updateTodo = item.text;
