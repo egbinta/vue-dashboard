@@ -1,9 +1,4 @@
 <template>
-  <Topbar />
-  <Subbar />
-  <Mainsidebar />
-  <Subsidebar />
-  <Tabbar />
   <div class="main-area">
     <div class="test">
       <h5>Please enter your search hear</h5>
@@ -15,32 +10,19 @@
       <h5>Search Result</h5>
       <div class="searchResultContainer">
         <div v-for="item in items" :key="item.id">
-          {{ item.text }}
+          {{ item.answer }}
         </div>
       </div>
     </div>
   </div>
-  <Foot />
 </template>
 
 <script>
-import Topbar from "@/components/Top-bar.vue";
-import Subbar from "../components/Sub-bar.vue";
-import Mainsidebar from "../components/Main-sidebar.vue";
-import Subsidebar from "../components/Sub-sidebar.vue";
-import Tabbar from "../components/Tab-bar.vue";
-import Foot from "../components/Main-foot.vue";
-import env from "@/env.js";
+import env from "../env";
+
 export default {
   name: "SearchPage",
-  components: {
-    Topbar,
-    Subbar,
-    Mainsidebar,
-    Subsidebar,
-    Tabbar,
-    Foot,
-  },
+
   data() {
     return {
       searchItem: "",
@@ -57,10 +39,10 @@ export default {
         `https://www.googleapis.com/customsearch/v1?key=${env.apiKey}&cx=${env.cx}&q=${this.searchItem}`
       );
       const data = await response.json();
-      return data.items[0].pagemap.answer;
+      console.log(data.items[0].pagemap);
     },
   },
-  async created() {
+  async mounted() {
     this.items = await this.onSubmit();
   },
 };

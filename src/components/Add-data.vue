@@ -44,7 +44,7 @@ export default {
   width: 500px;
   right: 0;
   padding: 15px 20px;
-  margin-top: -580px;
+  margin-top: -50px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }

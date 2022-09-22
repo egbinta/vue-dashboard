@@ -30,11 +30,11 @@
       <ul>
         <li class="link-item">
           <i class="fa fa-podcast" aria-hidden="true"></i>
-          <router-link to="/about">Some random text</router-link>
+          <router-link to="/">Some random text</router-link>
         </li>
         <li class="link-item">
           <i class="fa fa-snowflake-o" aria-hidden="true"></i>
-          <router-link to="/tab">Tab on the DOM</router-link>
+          <router-link to="/tab">Todos with JSON Server</router-link>
         </li>
         <li class="link-item">
           <i class="fa fa-life-ring" aria-hidden="true"></i>
@@ -43,6 +43,10 @@
         <li class="link-item">
           <i class="fa fa-server" aria-hidden="true"></i>
           <router-link to="/form">Some form manipulation</router-link>
+        </li>
+        <li class="link-item">
+          <i class="fa fa-server" aria-hidden="true"></i>
+          <router-link to="/search-page">Search Page</router-link>
         </li>
       </ul>
     </div>

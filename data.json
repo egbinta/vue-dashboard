@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "0": null,
+      "1": null,
+      "text": "Take out the trash",
+      "date": "23rd sept 2020",
+      "reminder": false,
+      "id": 2
+    },
+    {
+      "text": "Visit the Doctor",
+      "date": "10th Sept 2022",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "Solve some harkerrank quetions",
+      "date": "22nd Sept 2022",
+      "id": 4
+    }
+  ]
+}
