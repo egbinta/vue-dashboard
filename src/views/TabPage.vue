@@ -44,6 +44,7 @@
         :items="items"
         @delete-task="deleteItem"
         @update-item="updateItem"
+        @update-status="updateStatus"
       />
     </div>
   </div>
@@ -64,6 +65,7 @@ export default {
       items: [],
       todo: "",
       date: "",
+      reminder: false,
       updateTodo: "",
       updateDate: "",
       itemId: "",
@@ -116,19 +118,31 @@ export default {
         console.log(error);
       }
     },
+    async updateStatus(id) {
+      // alert(id);
+      const changeStatus = await this.fetchTask(id);
+      const updStatus = { ...changeStatus, reminder: !changeStatus.reminder };
+      try {
+        const res = await axios.patch(`http://localhost:5000/tasks/${id}`, {
+          reminder: updStatus.reminder,
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    },
     async deleteItem(id) {
       axios.delete(`http://localhost:5000/tasks/${id}`);
       this.items = this.items.filter((item) => item.id !== id);
     },
-    // async fetchTask(id) {
-    //   try {
-    //     const res = await axios.get(`http://localhost:5000/tasks/${id}`);
-    //     const data = await res.data;
-    //     return data;
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // },
+    async fetchTask(id) {
+      try {
+        const res = await axios.get(`http://localhost:5000/tasks/${id}`);
+        const data = await res.data;
+        return data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
   async created() {
     try {
