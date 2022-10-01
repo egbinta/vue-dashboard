@@ -67,7 +67,7 @@ export default {
 <style scoped>
 .sub-sidenav {
   top: 0;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   width: 280px;
   min-height: 85.5vh;
   background-color: #fff;
@@ -121,13 +121,13 @@ export default {
   color: rgb(152, 149, 149);
   font-size: 14px;
   position: absolute;
-  left: 83px;
+  left: 23px;
   top: 173px;
 }
 .search-input .queicon {
   position: absolute;
   top: 172px;
-  left: 304px;
+  left: 240px;
   cursor: pointer;
 }
 .link-container {

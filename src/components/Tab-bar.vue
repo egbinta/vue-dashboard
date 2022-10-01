@@ -23,7 +23,7 @@ export default {
 .tab-bar {
   background: rgb(239 238 238);
   margin-top: -85.5vh;
-  margin-left: 340px;
+  margin-left: 280px;
   padding: 12px 10px;
   border-bottom: 1px solid #ddd;
 }

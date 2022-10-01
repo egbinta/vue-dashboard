@@ -1,7 +1,7 @@
 <template>
   <Topbar />
   <Subbar />
-  <Mainsidebar />
+  <!-- <Mainsidebar /> -->
   <Subsidebar @toggle-form="toggleForm" />
   <Tabbar />
   <Transition name="fade">
@@ -14,7 +14,7 @@
 <script>
 import Topbar from "@/components/Top-bar.vue";
 import Subbar from "@/components/Sub-bar.vue";
-import Mainsidebar from "@/components/Main-sidebar.vue";
+//import Mainsidebar from "@/components/Main-sidebar.vue";
 import Subsidebar from "@/components/Sub-sidebar.vue";
 import Tabbar from "@/components/Tab-bar.vue";
 import AddData from "@/components/Add-data.vue";
@@ -24,7 +24,7 @@ export default {
   components: {
     Topbar,
     Subbar,
-    Mainsidebar,
+    // Mainsidebar,
     Subsidebar,
     Tabbar,
     AddData,
@@ -58,7 +58,7 @@ export default {
 .main-area {
   background: #fff;
   margin-top: 20px;
-  margin-left: 360px;
+  margin-left: 300px;
   margin-right: 20px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;

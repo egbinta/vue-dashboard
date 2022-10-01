@@ -1,7 +1,7 @@
 <template>
   <div class="topbar">
     <div class="topbar-item">
-      <div>
+      <div class="sandbox">
         <button class="updbtn">SANDBOX</button>
         <span
           >Set up billing to update Bigquery experience.
@@ -75,5 +75,14 @@ export default {
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: 500;
+}
+@media (max-width: 699px) {
+  .sandbox {
+    display: none;
+  }
+  .topbar-item {
+    display: flex;
+    margin-left: 10px;
+  }
 }
 </style>

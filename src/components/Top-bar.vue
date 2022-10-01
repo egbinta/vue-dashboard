@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-primary p-2">
     <div class="topbar-container container-fluid row">
-      <div class="col-md-3 logo-section">
+      <div class="logo-section">
         <i class="fa fa-bars" aria-hidden="true"></i>
         <router-link to="/" class="topbar-logo">
           Google <span class="topbar-sublogo">Cloud</span>
@@ -12,24 +12,26 @@
           <i class="fa fa-caret-down ml-2" aria-hidden="true"></i>
         </button>
       </div>
-      <div class="search-form col-md-6">
+      <div class="search-form">
         <form>
           <input
             type="text"
             class="search-input"
             placeholder="Search product"
           />
-          <button><i class="fa fa-search"></i></button>
+          <!-- <button><i class="fa fa-search"></i></button> -->
         </form>
       </div>
-      <div class="col-md-3 topbar-icon">
+      <div class="topbar-icon">
         <span class="icon-bar">
           <i class="fa fa-gift ficon" aria-hidden="true"></i>
           <i class="fa fa-dashcube ficon" aria-hidden="true"></i>
           <i class="fa fa-bell ficon" aria-hidden="true"></i>
           <i class="fa fa-question-circle ficon" aria-hidden="true"></i>
-          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
         </span>
+      </div>
+      <div class="topbar-icon-ellipsis">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
       </div>
     </div>
   </nav>
@@ -84,7 +86,8 @@ nav {
   border-radius: 5px;
 }
 .search-form {
-  width: 100%;
+  width: 30%;
+  /* margin-bottom: -25px; */
 }
 .search-form .search-input {
   width: 100%;
@@ -92,7 +95,6 @@ nav {
   border: 1px solid aliceblue;
   padding: 5px 20px;
   border-radius: 10px;
-  position: relative;
 }
 ::placeholder {
   color: aliceblue;
@@ -102,14 +104,17 @@ nav {
   border: none;
   background-color: transparent;
   color: aliceblue;
-  position: absolute;
-  right: 45px;
-  top: 4px;
+  padding: 0px;
+  margin: 0px;
+  /* transform: translate(400px, -31px); */
 }
 .topbar-icon {
   display: flex;
   justify-content: right;
   align-items: center;
+}
+.topbar-icon-ellipsis {
+  color: aliceblue;
 }
 .topbar-icon .icon-bar .ficon {
   margin-right: 45px;
@@ -117,5 +122,20 @@ nav {
 }
 .topbar-icon .icon-bar .fa {
   color: aliceblue;
+}
+@media (max-width: 1285px) {
+  .topbar-icon {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .search-form {
+    display: none;
+  }
+}
+@media (max-width: 404px) {
+  .topbar-title {
+    display: none;
+  }
 }
 </style>
