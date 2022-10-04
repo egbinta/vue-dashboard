@@ -1,21 +1,20 @@
 <template>
-  <div class="sub-sidenav">
-    <div class="sub-sidenav-head">
-      <div class="sub-sidenav-head-item1">Explore</div>
-      <div class="sub-sidenav-head-item2">
-        <span>
-          <i class="fa fa-plus pr-2" aria-hidden="true"></i>
-          <span @click="onClick">ADD DATA</span>
-        </span>
-      </div>
-      <div class="arrow">
-        <span>
-          &#10073;
-          <i class="fa fa-angle-left" aria-hidden="true"></i>
-        </span>
-      </div>
+  <div class="sub-sidenav-head">
+    <div class="sub-sidenav-head-item1">Explore</div>
+    <div class="sub-sidenav-head-item2">
+      <span>
+        <i class="fa fa-plus pr-2" aria-hidden="true"></i>
+        <span @click="onClick">ADD DATA</span>
+      </span>
     </div>
-
+    <div class="arrow">
+      <span>
+        &#10073;
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <div class="sub-sidenav">
     <div class="search-input">
       <form>
         <input type="text" placeholder="Type to search" />
@@ -30,23 +29,27 @@
       <ul>
         <li class="link-item">
           <i class="fa fa-podcast" aria-hidden="true"></i>
-          <router-link to="/">Some random text</router-link>
+          <router-link to="/" class="link">Some random text</router-link>
         </li>
         <li class="link-item">
           <i class="fa fa-snowflake-o" aria-hidden="true"></i>
-          <router-link to="/tab">Todos with JSON Server</router-link>
+          <router-link to="/tab" class="link"
+            >Todos with JSON Server</router-link
+          >
         </li>
         <li class="link-item">
           <i class="fa fa-life-ring" aria-hidden="true"></i>
-          <router-link to="/interact">Interaction</router-link>
+          <router-link to="/interact" class="link">Interaction</router-link>
         </li>
         <li class="link-item">
           <i class="fa fa-server" aria-hidden="true"></i>
-          <router-link to="/form">Some form manipulation</router-link>
+          <router-link to="/form" class="link"
+            >Some form manipulation</router-link
+          >
         </li>
         <li class="link-item">
           <i class="fa fa-server" aria-hidden="true"></i>
-          <router-link to="/search-page">Search Page</router-link>
+          <router-link to="/search-page" class="link">Search Page</router-link>
         </li>
       </ul>
     </div>
@@ -69,14 +72,27 @@ export default {
   top: 0;
   /* margin-left: 60px; */
   width: 280px;
-  min-height: 85.5vh;
+  min-height: 78.9vh;
   background-color: #fff;
   border-right: 1px solid #ddd;
+  /* transition: all 0.3s ease-in-out; */
+}
+@media (max-width: 699px) {
+  .sub-sidenav {
+    width: 50px;
+  }
+  .link-item .link {
+    display: none;
+  }
+  .queicon {
+    display: none;
+  }
 }
 .sub-sidenav-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 280px;
   padding: 12px 15px;
   border-bottom: 1px solid #ddd;
 }

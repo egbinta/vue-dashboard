@@ -3,7 +3,7 @@
     <div class="test">
       <div v-if="todoForm">
         <h4>Enter a Todo</h4>
-        <form @submit="onSubmit">
+        <form @submit="onSubmit" class="stackForm">
           <input
             type="text"
             v-model="todo"
@@ -21,7 +21,7 @@
       </div>
       <div v-if="updateForm">
         <h4>Update Todo</h4>
-        <form @submit.prevent="update">
+        <form @submit.prevent="update" class="stackForm">
           <input type="hidden" v-model="itemId" />
           <input
             type="text"
@@ -181,5 +181,18 @@ export default {
 form {
   margin-bottom: 40px;
   display: flex;
+}
+@media (max-width: 894px) {
+  form {
+    display: block;
+  }
+  .todo-form {
+    margin-bottom: 10px;
+    width: 240px !important;
+    height: 30px;
+  }
+  .todo-btn {
+    margin-left: 0;
+  }
 }
 </style>

@@ -1,16 +1,28 @@
 {
   "tasks": [
     {
-      "text": "Take out the trash",
-      "date": "10th 11 2022",
+      "text": "Solve Algorithm",
+      "date": "4th Oct 2022 @ 8am - 10am",
       "reminder": true,
       "id": 1
     },
     {
-      "text": "Get the groceries",
-      "date": "1st Oct 2022",
-      "reminder": true,
+      "text": "Study vue js",
+      "date": "4th Oct 2022 @ 10am - 12pm",
+      "reminder": false,
       "id": 2
+    },
+    {
+      "text": "Fix my CV in arc platform",
+      "date": "4th Oct 2022 @ 1pm - 2:15pm",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "watch you tube tutorial on Laravel",
+      "date": "4th Oct 2022 @ 2:30pm prompt",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
