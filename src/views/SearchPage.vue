@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import env from "../env";
 
 export default {
@@ -30,19 +31,38 @@ export default {
     };
   },
   methods: {
+    // async onSubmit() {
+    //   if (!this.searchItem) {
+    //     alert("Please enter a search");
+    //     return;
+    //   }
+    //   const response = await fetch(
+    //     `https://www.googleapis.com/customsearch/v1?key=${env.apiKey}&cx=${env.cx}&q=${this.searchItem}`
+    //   );
+    //   const data = await response.json();
+    //   console.log(data.items[0].pagemap);
+    // },
+
     async onSubmit() {
-      if (!this.searchItem) {
-        alert("Please enter a search");
-        return;
+      try {
+        const res = await axios.get(
+          "https://youtube138.p.rapidapi.com/search/",
+          {
+            params: { q: this.searchItem },
+            headers: {
+              "X-RapidAPI-Key":
+                "b89922295dmshe7d2453f3a26507p131c79jsnb5230be8042f",
+              "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
+            },
+          }
+        );
+        console.log(res.data);
+      } catch (error) {
+        console.log(error);
       }
-      const response = await fetch(
-        `https://www.googleapis.com/customsearch/v1?key=${env.apiKey}&cx=${env.cx}&q=${this.searchItem}`
-      );
-      const data = await response.json();
-      console.log(data.items[0].pagemap);
     },
   },
-  async mounted() {
+  async created() {
     this.items = await this.onSubmit();
   },
 };

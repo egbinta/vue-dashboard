@@ -40,7 +40,7 @@ export default {
   background-color: #fff;
   position: absolute;
   z-index: 10;
-  height: 85.5vh;
+  height: 85vh;
   width: 500px;
   right: 0;
   padding: 15px 20px;

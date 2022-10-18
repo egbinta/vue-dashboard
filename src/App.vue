@@ -74,7 +74,7 @@ export default {
   overflow-y: scroll;
 }
 .fade-enter-active {
-  transition: all 0.3s ease-in;
+  transition: all 0.7s ease-in;
 }
 .fade-leave-active {
   transition: opacity 0.8s ease-in-out;
@@ -82,7 +82,6 @@ export default {
 
 .fade-enter-from,
 .fade-leave-to {
-  /* transform: translateX(20px); */
-  opacity: 0;
+  transform: translateX(500px);
 }
 </style>

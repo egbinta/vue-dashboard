@@ -8,20 +8,14 @@
     },
     {
       "text": "Study vue js",
-      "date": "4th Oct 2022 @ 10am - 12pm",
-      "reminder": false,
+      "date": "4st Oct 2022 @ 10am - 12am",
+      "reminder": true,
       "id": 2
-    },
-    {
-      "text": "Fix my CV in arc platform",
-      "date": "4th Oct 2022 @ 1pm - 2:15pm",
-      "reminder": false,
-      "id": 3
     },
     {
       "text": "watch you tube tutorial on Laravel",
       "date": "4th Oct 2022 @ 2:30pm prompt",
-      "reminder": false,
+      "reminder": true,
       "id": 4
     }
   ]
